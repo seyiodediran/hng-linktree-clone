@@ -1,38 +1,154 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto auto;
+  font-size: 18px;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 64px 144px 56px;
+  width: 1152px;
+  position: relative;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.share {
+  position: absolute;
+  right: 208px;
+  top: -20px;
+}
+
+.pfp {
+  width: 88px;
+  height: 88px;
+  margin-bottom: 24px;
+}
+
+.pfp img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.usr__twitter {
+  font-size: 20px;
+}
+
+.link__container {
+  width: 1152px;
+  height: 76px;
+  padding: 24px 32px;
+  margin-bottom: 24px;
+  background: #EAECF0;
+  border: 1px solid #EAECF0;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.link__container li {
+  list-style: none;
+}
+
+.link__container li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.hidden {
+  display: none;
+}
+
+.socials {
+  padding: 24px 0;
+  margin-bottom: 64px;
+}
+
+.socials li {
+  display: inline-block;
+}
+
+.socials li:nth-child(1) {
+  padding-right: 24px;
+}
+
+.footer {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  padding: 32px 0;
+}
+
+
+.footer .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1216px;
+  height: 64px;
+  margin: auto;
+  border-top: 1px solid #EAECF0;
+}
+
+.footer .content .text {
+  color: #667085;
+}
+
+@media (max-width: 506px) {
+
+  .profile,
+  .link__container {
+    width: 343px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .share {
+    right: 0;
+  }
+
+  .socials {
+    margin-bottom: 32px;
+  }
+
+  .footer {
+    height: 196px;
+  }
+
+  .footer .content {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 132px;
+    width: 343px;
+    padding: 32px 0 0;
+  }
+
+  .footer .content .text {
+    font-size: 14px;
+  }
+
+  .footer .content .zuri img{
+    width: 140px;
+    height: auto;
+  }
+
+  .footer .content .i4g img{
+    width: 99px;
+    height: auto;
   }
 }
